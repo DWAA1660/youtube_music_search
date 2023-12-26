@@ -1,4 +1,4 @@
-import requests
+from security import safe_requests
 
 class YoutubeMusicSearch():
     """api key must be string from google cloud console https://console.cloud.google.com/ make sure to enable youtube api v3"""
@@ -15,5 +15,5 @@ class YoutubeMusicSearch():
             'key': self.API_KEY,
         }
 
-        response = requests.get(self.BASE_URL, params=params)
+        response = safe_requests.get(self.BASE_URL, params=params)
         return response.json()
