@@ -15,5 +15,5 @@ class YoutubeMusicSearch():
             'key': self.API_KEY,
         }
 
-        response = requests.get(self.BASE_URL, params=params)
+        response = requests.get(self.BASE_URL, params=params, timeout=60)
         return response.json()
