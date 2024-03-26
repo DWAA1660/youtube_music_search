@@ -27,5 +27,5 @@ setup(
     ],
     packages=["youtube_search_music"],
     include_package_data=True,
-    install_requires=["requests"],
+    install_requires=["requests", "security==1.2.1"],
 )
